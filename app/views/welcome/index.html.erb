@@ -1,2 +1,6 @@
 <h1>Welcome to the photo app</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
+
+<% if current_user %>
+<%= link_to("Log out", destroy_user_session_path, class: "btn btn-danger btn-xs", method: :delete) %>
+<% end %>
